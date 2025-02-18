@@ -1,9 +1,20 @@
 function FormatarData(){
     const diasDasSemanas = [
-        'domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'
+        'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
     ];
 
     const meses = [
-        'janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'
+        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
     ];
+
+    const dataAtual = new Date();
+    const diaSemana = diasDasSemanas[dataAtual.getDay()];
+    const diaDoMes = dataAtual.getDate();
+    const mes = meses[dataAtual.getMonth()];
+    const ano = dataAtual.getFullYear();
+
+    const dataFormatada = `${diaSemana}, ${diaDoMes} de ${mes} de ${ano}`;
+
+    document.getElementById('dataAtual').innerHTML = dataFormatada;
 }
+FormatarData();
