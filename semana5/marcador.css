@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#app {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 320px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #5140ea;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 120px;
+}
+
+button:hover {
+    background-color:#857aea;
+}
+
+button:active {
+    background-color: #958bee;
+}
+
+#btnDiminuirHomens, #btnDiminuirMulheres {
+    background-color: #f44336;
+}
+
+#btnDiminuirHomens:hover, #btnDiminuirMulheres:hover {
+    background-color: #e53935;
+}
+
+#btnDiminuirHomens:active, #btnDiminuirMulheres:active {
+    background-color: #c62828;
+}
+
+button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+}
+
+button:disabled:hover {
+    background-color: #bdbdbd;
+}
+
+/* Estilo para os botões de adicionar e diminuir ficarem lado a lado */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.button-container button {
+    width: 48%;  /* Tornando os botões um pouco menores */
+}
