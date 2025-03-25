@@ -1,0 +1,117 @@
+/* Estilos gerais para a calculadora */
+#calculadora {
+    width: 320px;
+    max-width: 100%;
+    margin: 50px auto;
+    background-color: #2c2f3f;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Organiza os botões em 4 colunas */
+    grid-gap: 10px; /* Reduzido para manter uma boa margem */
+}
+
+/* Estilo do visor (h1) */
+#valor {
+    grid-column: span 4; /* O visor ocupa toda a linha (4 colunas) */
+    font-size: 48px;
+    text-align: right;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+/* Estilos para os botões */
+button {
+    width: 70px;
+    height: 70px;
+    background-color: #444;
+    color: white;
+    border: none;
+    font-size: 28px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeitos ao passar o mouse ou clicar no botão */
+button:hover {
+    background-color: #666;
+}
+
+button:active {
+    background-color: #444;
+    transform: scale(0.95);
+}
+
+/* Botões de operação com cores diferentes */
+button#soma {
+    background-color: #ff9800;
+}
+
+button#subtracao {
+    background-color: #f44336;
+}
+
+button#multiplicacao {
+    background-color: #4caf50;
+}
+
+button#divisao {
+    background-color: #2196f3;
+}
+
+button#porcentagem {
+    background-color: #9c27b0;
+}
+
+button#resetar {
+    background-color: #e91e63;
+}
+
+button#inverter {
+    background-color: #607d8b;
+}
+
+button#Apresentar {
+    background-color: #673ab7;
+}
+
+/* Organizando o layout da calculadora com os botões */
+#calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 colunas */
+    grid-gap: 10px;
+    grid-template-rows: auto;
+}
+
+/* Ajustando os botões para melhor exibição */
+button:nth-child(4n+1) {
+    grid-column: span 1;
+}
+
+/* Ajustando o layout para telas pequenas */
+@media (max-width: 400px) {
+    #calculadora {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin: 8px;
+    }
+
+    #valor {
+        font-size: 40px;
+    }
+}

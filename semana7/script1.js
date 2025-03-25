@@ -5,22 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
         <button id="resetar">AC</button>
         <button id="inverter">+/-</button>
         <button id="porcentagem">%</button>
-        <button id="divisao">/</button><br>
+        <button id="divisao">/</button>
 
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <button id="multiplicacao">X</button><br>
+        <button id="multiplicacao">X</button>
 
         <button>4</button>
         <button>5</button>
         <button>6</button>
-        <button id="subtracao">-</button><br>
+        <button id="subtracao">-</button>
 
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button id="soma">+</button><br>
+        <button id="soma">+</button>
 
         <button>0</button>
         <button>,</button>
