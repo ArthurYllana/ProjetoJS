@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (buttonText.match(/[0-9,]/)) {
                 adicionarValor(buttonText);
-            } else if (button.id === "soma" || button.id === "subtracao" || button.id === "multiplicacao" || button.id === "divisao") {
+            } else if (button.id === "soma" || button.id === "subtracao" || button.id === "multiplicacao" ||
+                 button.id === "divisao") {
                 prepararOperacao(button.id);
             } else if (button.id === "porcentagem") {
                 prepararOperacao("porcentagem");
