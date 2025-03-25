@@ -44,10 +44,10 @@ function diminuirValor(tipo) {
     atualizarTotal();
 }
 
-function atualizarTotal() {
-    let total = valorHomens + valorMulheres;
-    document.getElementById('total').textContent = total;
-}
+    function atualizarTotal() {
+        let total = valorHomens + valorMulheres;
+        document.getElementById('total').textContent = total;
+    }
 
 function resetarValores() {
     valorHomens = 0;
