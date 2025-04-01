@@ -1,13 +1,32 @@
-function verificarTipoDado() {
-    let entrada = prompt("Digite um valor:");
-    let desejaVerificar = confirm("Deseja verificar o tipo do dado informado?");
-    let resultado = document.body;
-    if (desejaVerificar) {
-        resultado.innerHTML = `<h2>O tipo do dado informado é: <strong>${typeof entrada}</strong></h2>`;
-    } else {
-        resultado.innerHTML = "<h2>Obrigado por visitar esta página.</h2>";
-    }
-}
+// let dado = prompt("Insira a entrada de um dado qualquer: ");
 
-// Chamar a função ao carregar a página
-verificarTipoDado();
+document.addEventListener("DOMContentLoaded",function() {
+
+    document.getElementById("formulario").addEventListener("submit",verificarTipo);
+
+    function verificarTipo(evento) {
+        evento.preventDefault(); // prevente da pagina recarregar apos enviar formulario
+        let dado = document.getElementById("input").value.trim();
+        let tipoDado;
+
+        // numero
+        if (!isNaN(dado) && dado !== '') { // converte a string em numero
+            tipoDado = 'number';
+        }
+        // booleano
+        else if (dado.toLowerCase() === "true" || dado.toLowerCase() === "false") { // toLowerCase() previne caso o usuario digite maiusculo
+            tipoDado = 'boolean';
+        }
+        // string
+        else {
+            tipoDado = 'string';
+        }
+
+        if(confirm("Deseja verificar o tipo do dado informado?")) {
+            document.getElementById("resultado").innerHTML = "O tipo do dado informado é "+ tipoDado +".";
+        }
+        else {
+            document.getElementById("resultado").innerHTML = "Obrigado por visitar esta página.";
+        }
+    }
+});

@@ -1,20 +1,19 @@
-function FormatarData(){
-    const diasDasSemanas = [
-        'Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'
-    ];
+let data = new Date();
 
-    const meses = [
-        'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-    ];
+let diaSemana = data.getDay();
+const diasSemana = [
+    "Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+diaSemana = diasSemana[diaSemana];
 
-    const dataAtual = new Date();
-    const diaSemana = diasDasSemanas[dataAtual.getDay()];
-    const diaDoMes = dataAtual.getDate();
-    const mes = meses[dataAtual.getMonth()];
-    const ano = dataAtual.getFullYear();
+let dia = data.getDate();
 
-    const dataFormatada = `${diaSemana}, ${diaDoMes} de ${mes} de ${ano}`;
+let mes = data.getMonth();
+const meses = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+];
+mes = meses[mes];
 
-    document.getElementById('dataAtual').innerHTML = dataFormatada;
-}
-FormatarData();
+let ano = data.getYear() + 1900;
+
+document.getElementById("dataAtual").innerHTML = diaSemana +", "+ dia +" de "+ mes +" de "+ ano;
