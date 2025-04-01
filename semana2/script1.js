@@ -16,4 +16,4 @@ mes = meses[mes];
 
 let ano = data.getYear() + 1900;
 
-document.getElementById("dataAtual").innerHTML = diaSemana +", "+ dia +" de "+ mes +" de "+ ano;
+document.getElementById("data_atual").innerHTML = diaSemana +", "+ dia +" de "+ mes +" de "+ ano;
