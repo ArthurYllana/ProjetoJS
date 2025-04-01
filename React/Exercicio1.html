@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionando React à minha página</title>
+    <!-- Chamando a biblioteca do React -->
+    <!-- Babel: faz leitura de HTML com JavaScript -->
+    <script src="http://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="http://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Sintaxe JSX (não é uma string JavaScript nem uma marcação HTML)
+        function MeuElemento(){
+            return <h1>Olá, mundo</h1>; 
+        }
+
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container); 
+        root.render(<MeuElemento />); 
+    </script>
+</body>
+</html>
