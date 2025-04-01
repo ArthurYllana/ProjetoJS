@@ -13,17 +13,24 @@
     <div id="root"></div>
     <script type="text/babel">
         // Sintaxe JSX (não é uma string JavaScript nem uma marcação HTML)
-        function MeuElemento(){
-           return <>
-                <h1>Olá Mundo</h1>
-                <h2>Olá Sala </h2>
+        function MeuElemento({texto}){
+           return(
+            <>
+                <h1>Venha estudar na Fatec</h1>
             </>
-           
+           )
         }
-
         const container = document.getElementById('root');
         const root = ReactDOM.createRoot(container); 
-        root.render(<MeuElemento />); 
+
+        function digitar(){
+            const texto = MeuElemento();
+            for(i = 0; i < MeuElemento.length; i++){
+                let letra = texto[i];
+            }
+            root.render(<MeuElemento texto= {letra} />)
+        }
+        setInterval(digitar,1000);
     </script>
 </body>
 </html>
