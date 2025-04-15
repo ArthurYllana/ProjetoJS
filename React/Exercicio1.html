@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Adicionando React à minha página</title>
-    <!-- Chamando a biblioteca do React -->
-    <!-- Babel: faz leitura de HTML com JavaScript -->
     <script src="http://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="http://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="http://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Venha estudar na Fatec!</title>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel">
-        // Sintaxe JSX (não é uma string JavaScript nem uma marcação HTML)
-        function MeuElemento({texto}){
-           return(
-            <>
-                <h1>Venha estudar na Fatec</h1>
-            </>
-           )
-        }
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container); 
+    <div id="texto"></div>
 
-        function digitar(){
-            const texto = MeuElemento();
-            for(i = 0; i < MeuElemento.length; i++){
-                let letra = texto[i];
-            }
-            root.render(<MeuElemento texto= {letra} />)
+    <script type="text/babel">
+        const textoCompleto = "Venha estudar na Fatec!";
+        let i = 0;
+
+        function MeuTexto({digitado}) {
+            return <><h1>{digitado}</h1></>
         }
-        setInterval(digitar,1000);
+
+        const container = document.getElementById('texto');
+        const root = ReactDOM.createRoot(container);
+
+        function digitar() {
+            if (i <= textoCompleto.length) {
+                const textoDigitando = textoCompleto.slice(0,i); // início (inclusivo), fim (exclusivo)
+                root.render(<MeuTexto digitado={textoDigitando} />);
+                i++;
+            } else {
+                // Após completar o texto, reinicia a contagem
+                i = 0;
+            }
+        }
+        setInterval(digitar, 200);
     </script>
 </body>
 </html>
